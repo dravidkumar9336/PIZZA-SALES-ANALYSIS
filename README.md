@@ -1,50 +1,32 @@
-# Pizza Sales Dashboard
 
-A comprehensive Power BI dashboard for analyzing pizza sales .
+KPI Requirement
 
-📊 Overview
+We will analyze key indicators for our pizza sales data to gain insights into our business performance. Specifically we want to calculate the following metrics:
 
-This interactive Power BI report provides deep insights into pizza sales data, including:
+Total Revenue – The sum of the total price of all pizza orders
 
-- Total Revenue (Key KPI card)
-- Sales trends over time
-- Performance by pizza category, size, and type
-- Top-selling pizzas
-- Revenue breakdown and profitability analysis
-- Customer/order volume metrics
+Average Order Value – The average amount spent per order, calculated by dividing the total revenue by the total number of orders
 
-🛠 Features
+Total Pizzas Sold – The sum of the quantities of all pizzas sold
 
-- Modern and clean design with custom theme (CY26SU02)
-- Responsive visuals optimized for different screen sizes
-- Interactive slicers and filters
-- Professional layout with background imagery
+Total Orders – The total number of orders placed.
 
- 📁 File Information
+Average Pizzas Per Order - The average number of pizzas sold per order, calculated by dividing the total number of pizzas sold by the total number of orders.
 
-- File Name: `Dravid pizza sales.pbix`
-- Format: Power BI Desktop Report (.pbix)
-- Size: ~1.19 MB
--Created: July 2026
+Charts Requirement
 
- 🚀 How to Use
+We would like to visualize various aspects of out pizza sales data to gain insights and understand key trends. We have identified the following requirements for creating charts:
 
-1. Download the `.pbix` file
-2. Open it with Power BI Desktop (free)
-3. Refresh the data if needed (if connected to a source)
-4. Explore the interactive dashboard
+Daily Trend For Total Orders – Create a bar chart that displays the daily trend of total orders over a specific time period. This chart will help us identify any patterns or fluctuations in the order volumes on a daily basis
 
- 📈 Key Metrics Visualized
+Monthly Trend for Total Orders – Create a line chart that illustrates the hourly trend of total orders throughout the day. This chart will allow us to identify peak hours or periods of high order activity.
 
-- Total Revenue
-- Total Orders
-- Average Order Value
-- Sales by Pizza Category (Classic, Supreme, Veggie, etc.)
-- Sales by Size (Small, Medium, Large, XL)
-- Monthly/Weekly trends
+Percentage of Sales by Pizza Category – Create a pie chart that shows the distribution of sales across different pizza categories. This chart will provide insights into the popularity of various pizza categories and their contribution to overall sales.
 
----
+Percentage of Sales by Pizza Size – Generate a pie chart that represents the percentage of sales attributed to different pizza sizes. This chart will help us understand customer preferences for pizza sizes and their impact on sales.
 
-Made with ❤️ for Pizza Analytics**
+Total Pizzas Sold by Pizza Category – Create a funnel chart that presents the total number of pizzas sold for each pizza category. This chart will allow us to compare the sales performance of different pizza categories.
 
-Feel free to fork, customize, or use this dashboard as a template for your own sales reporting projects!
+Top 5 Best Sellers by Revenue, Total Quantity, and Total Orders – Create a bar chart highlighting the top 5 best-selling pizzas based on the Revenue, Total Quantity, Total Orders. This chart will help us identify the most popular pizza options
+
+Bottom 5 Sellers by Revenue, Total Quantity, and Total Orders – Create a bar chart showcasing the bottom 5 worst selling pizzas based on the Revenue, Total Quantity, and Total Orders. This chart will enable us to identify underperforming or less popular pizza options.
