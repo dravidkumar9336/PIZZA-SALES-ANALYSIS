@@ -1,32 +1,52 @@
+# 🍕 Pizza Sales Analysis Dashboard
 
-KPI Requirement
+## 📌 Overview
+This project presents an end-to-end analysis of a pizza restaurant's sales data. I cleaned and queried the data in MySQL, then built an interactive Power BI dashboard to derive business insights such as top-selling pizzas, peak sales hours, and category-wise revenue trends.
 
-We will analyze key indicators for our pizza sales data to gain insights into our business performance. Specifically we want to calculate the following metrics:
+## 🎯 Business Problem
+Restaurant management had no visibility into which pizzas sold the most, when peak order hours occurred, and which category generated the most revenue. This dashboard provides a data-driven answer to those questions.
 
-Total Revenue – The sum of the total price of all pizza orders
+## 🛠️ Tools & Tech Stack
+- MySQL — data cleaning and querying
+- Power BI — dashboard and visualization
+- DAX — calculated measures
+- ODBC Connector — MySQL to Power BI connection
 
-Average Order Value – The average amount spent per order, calculated by dividing the total revenue by the total number of orders
+## 📊 Dashboard Preview
 
-Total Pizzas Sold – The sum of the quantities of all pizzas sold
+## 🔑 Key Insights
+- Total Revenue: 817.86K | Total Orders: 49K | Total Pizzas Sold: 50K
+- Avg Pizzas per Order: 1.02 | Avg Order Value: 16.82
+- Top pizza by revenue: The Thai Chicken Pizza and The Barbecue Chicken Pizza (tied, 43K each), followed by The California Chicken Pizza (41K), The Classic Deluxe Pizza (38K), and The Spicy Italian Pizza (35K)
+- Top pizza by quantity sold: The Spinach Pesto Pizza (16K units)
+- Revenue by category: Classic (26.91%), Supreme (25.46%), Chicken (23.96%), Veggie (23.68%) — fairly evenly distributed
+- Revenue by size: Large pizzas dominate at 45.89%, followed by Medium (30.49%) and Small (21.77%); XL/XXL sizes are a negligible share (~1.7%)
+- Weakest performers: The Brie Carre Pizza consistently ranks lowest across revenue, quantity, and orders
 
-Total Orders – The total number of orders placed.
+## 📈 DAX Measures Used
+```dax
+Total Revenue = SUM(pizza_sales[total_price])
 
-Average Pizzas Per Order - The average number of pizzas sold per order, calculated by dividing the total number of pizzas sold by the total number of orders.
+Total Orders = DISTINCTCOUNT(pizza_sales[order_id])
 
-Charts Requirement
+Avg Order Value = DIVIDE([Total Revenue], [Total Orders])
 
-We would like to visualize various aspects of out pizza sales data to gain insights and understand key trends. We have identified the following requirements for creating charts:
+Avg Pizzas Per Order = DIVIDE([Total Pizzas Sold], [Total Orders])
+```
 
-Daily Trend For Total Orders – Create a bar chart that displays the daily trend of total orders over a specific time period. This chart will help us identify any patterns or fluctuations in the order volumes on a daily basis
+## 🗄️ SQL Queries
+The MySQL queries used for data cleaning and analysis are available in `pizza_sales_queries.sql`, covering the top 5/bottom 5 selling pizzas, category-wise sales, and time-based trends.
 
-Monthly Trend for Total Orders – Create a line chart that illustrates the hourly trend of total orders throughout the day. This chart will allow us to identify peak hours or periods of high order activity.
+## ⚙️ How to Run
+1. Import `pizza_sales.csv` into MySQL
+2. Run `pizza_sales_queries.sql` to set up the tables/views
+3. In Power BI Desktop, connect to the MySQL database using the ODBC Connector
+4. Open `pizza_sales_dashboard.pbix` and refresh the data
 
-Percentage of Sales by Pizza Category – Create a pie chart that shows the distribution of sales across different pizza categories. This chart will provide insights into the popularity of various pizza categories and their contribution to overall sales.
+## 🚧 Challenges Faced
+- Fixed MySQL syntax for the bottom-5 selling pizzas query
+- Resolved CSV import issues involving `LOAD DATA INFILE` and `STR_TO_DATE`
+- Set up Power BI's connection to MySQL using the ODBC Connector (instead of Connector/NET)
 
-Percentage of Sales by Pizza Size – Generate a pie chart that represents the percentage of sales attributed to different pizza sizes. This chart will help us understand customer preferences for pizza sizes and their impact on sales.
-
-Total Pizzas Sold by Pizza Category – Create a funnel chart that presents the total number of pizzas sold for each pizza category. This chart will allow us to compare the sales performance of different pizza categories.
-
-Top 5 Best Sellers by Revenue, Total Quantity, and Total Orders – Create a bar chart highlighting the top 5 best-selling pizzas based on the Revenue, Total Quantity, Total Orders. This chart will help us identify the most popular pizza options
-
-Bottom 5 Sellers by Revenue, Total Quantity, and Total Orders – Create a bar chart showcasing the bottom 5 worst selling pizzas based on the Revenue, Total Quantity, and Total Orders. This chart will enable us to identify underperforming or less popular pizza options.
+## 📬 Contact
+Dravid Kumar | [linkedin.com/in/dravid-kumar-08a8a9362] | [kumardravid9336@gmail.com]
